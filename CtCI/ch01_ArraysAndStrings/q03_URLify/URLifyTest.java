@@ -20,5 +20,11 @@ public class URLifyTest {
 				URLify.urlify("why   ".toCharArray(), 1));
 		assertEquals("%20lol".toCharArray(),
 				URLify.urlify(" lol  ".toCharArray(), 4));
+		assertEquals("%20lol".toCharArray(),
+				URLify.urlify(" lol  ".toCharArray(), 4));
+		assertEquals("test ".toCharArray(),
+				URLify.urlify("test ".toCharArray(), 4));
+		assertEquals("t%20est ".toCharArray(),
+				URLify.urlify("t est   ".toCharArray(), 5));
 	}
 }
