@@ -1,8 +1,14 @@
 package ch01_ArraysAndStrings.q03_URLify;
 
+/**
+ * O(n) solution that takes O(1) space.
+ * 
+ * @author michael
+ *
+ */
 public class URLify {
 
-	public static char[] urlify(char[] input, int length) {
+	public static void urlify(char[] input, int length) {
 		int numSpaces = 0;
 		for (int i = 0; i < length; i++) {
 			if (input[i] == ' ') {
@@ -22,8 +28,6 @@ public class URLify {
 			}
 			location--;
 		}
-
-		return input;
 	}
 
 }
