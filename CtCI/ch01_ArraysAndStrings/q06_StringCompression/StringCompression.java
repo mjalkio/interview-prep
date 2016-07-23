@@ -3,7 +3,7 @@ package ch01_ArraysAndStrings.q06_StringCompression;
 public class StringCompression {
 
 	public static String stringCompression(String s) {
-		String comp = "";
+		StringBuilder comp = new StringBuilder();
 		int i = 0;
 		while (i < s.length()) {
 			char c = s.charAt(i);
@@ -12,11 +12,12 @@ public class StringCompression {
 				charCount++;
 				i++;
 			}
-			comp = comp + c + charCount;
+			comp.append(c);
+			comp.append(charCount);
 			i++;
 		}
 		if (comp.length() < s.length()) {
-			return comp;
+			return comp.toString();
 		} else {
 			return s;
 		}
