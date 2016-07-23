@@ -35,7 +35,7 @@ public class ZeroMatrixTest {
 				ZeroMatrix.zeroMatrix(new int[][] { { 0, 1, 2, 3 },
 						{ 4, 5, 6, 7 }, { 8, 9, 10, 11 }, { 12, 13, 14, 15 } }));
 		mxnArrayEquals(
-				new int[][] { { 1, 1, 2 }, { 3, 4, 5 }, { 0, 7, 8 } },
+				new int[][] { { 1, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 } },
 				ZeroMatrix.zeroMatrix(new int[][] { { 1, 1, 2 }, { 3, 4, 5 },
 						{ 6, 7, 8 } }));
 		mxnArrayEquals(
