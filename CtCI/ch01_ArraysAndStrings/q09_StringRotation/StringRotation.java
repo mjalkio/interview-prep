@@ -7,4 +7,7 @@ public class StringRotation {
 		return false;
 	}
 
+	private static boolean isSubstring(String bigString, String subString) {
+		return bigString.indexOf(subString) != -1;
+	}
 }
