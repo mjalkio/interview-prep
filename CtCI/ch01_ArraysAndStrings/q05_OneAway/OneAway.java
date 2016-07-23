@@ -1,5 +1,15 @@
 package ch01_ArraysAndStrings.q05_OneAway;
 
+/**
+ * O(n) solution that takes O(1) space.
+ * 
+ * Note: O(n) because the string lengths can differ by at most 1 (if they differ
+ * by more than that it will run in constant time).
+ * 
+ * @author Michael Jalkio
+ *
+ */
+
 public class OneAway {
 
 	public static boolean oneAway(String s1, String s2) {
