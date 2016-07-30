@@ -3,7 +3,7 @@ package ch02_LinkedLists;
 /**
  * Implementation of a LinkedList from Cracking the Coding Interview.
  * 
- * @author Gayle Laakmann McDowell
+ * @author Gayle Laakmann McDowell and Michael Jalkio
  *
  */
 public class Node {
@@ -45,6 +45,7 @@ public class Node {
 		while (n.next != null) {
 			s.append(n.data);
 			s.append(",");
+			n = n.next;
 		}
 		s.append(n.data);
 		return s.toString();
