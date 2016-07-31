@@ -14,6 +14,13 @@ public class Node {
 		data = d;
 	}
 
+	public Node(int[] lst) {
+		data = lst[0];
+		for (int i = 1; i < lst.length; i++) {
+			this.appendToTail(lst[i]);
+		}
+	}
+
 	public void appendToTail(int d) {
 		Node end = new Node(d);
 		Node n = this;
