@@ -14,6 +14,7 @@ public class PartitionTest {
 		}
 		while (partitionedList != null) {
 			assertTrue(partitionedList.data >= x);
+			partitionedList = partitionedList.next;
 		}
 	}
 
