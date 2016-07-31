@@ -5,16 +5,9 @@ import ch02_LinkedLists.Node;
 public class DeleteMiddleNode {
 
 	public static void removeNode(Node n) {
-		Node prev = n;
-		Node curr = n.next;
-		while (curr != null) {
-			prev.data = curr.data;
-			if (curr.next == null) {
-				prev.next = null;
-			}
-			prev = curr;
-			curr = curr.next;
-		}
+		Node next = n.next;
+		n.data = next.data;
+		n.next = next.next;
 	}
 
 }
