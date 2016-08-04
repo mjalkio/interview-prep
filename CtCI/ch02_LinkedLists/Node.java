@@ -46,6 +46,16 @@ public class Node {
 		return head;
 	}
 
+	public int length() {
+		int length = 1;
+		Node n = this;
+		while (n.next != null) {
+			length++;
+			n = n.next;
+		}
+		return length;
+	}
+
 	public String toString() {
 		StringBuilder s = new StringBuilder();
 		Node n = this;
