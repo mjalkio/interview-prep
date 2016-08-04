@@ -11,18 +11,21 @@ public class SumListsTest {
 	public void test() {
 		Node listOne = new Node(new int[] { 7, 1, 6 });
 		Node listTwo = new Node(new int[] { 5, 9, 2 });
-		assertEquals(912, SumListsReverse.sumLists(listOne, listTwo));
+		assertEquals("2,1,9", SumListsReverse.sumLists(listOne, listTwo)
+				.toString());
 
 		listOne = new Node(new int[] { 1 });
 		listTwo = new Node(new int[] { 1 });
-		assertEquals(2, SumListsReverse.sumLists(listOne, listTwo));
+		assertEquals("2", SumListsReverse.sumLists(listOne, listTwo).toString());
 
 		listOne = new Node(new int[] { 1, 2, 3 });
 		listTwo = new Node(new int[] { 1 });
-		assertEquals(322, SumListsReverse.sumLists(listOne, listTwo));
+		assertEquals("2,2,3", SumListsReverse.sumLists(listOne, listTwo)
+				.toString());
 
 		listOne = new Node(new int[] { 1, 2, 3 });
 		listTwo = new Node(new int[] { 0 });
-		assertEquals(321, SumListsReverse.sumLists(listOne, listTwo));
+		assertEquals("1,2,3", SumListsReverse.sumLists(listOne, listTwo)
+				.toString());
 	}
 }
