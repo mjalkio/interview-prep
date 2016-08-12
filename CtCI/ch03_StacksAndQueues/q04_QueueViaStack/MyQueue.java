@@ -1,25 +1,44 @@
 package ch03_StacksAndQueues.q04_QueueViaStack;
 
-public class MyQueue<T> {
+import java.util.NoSuchElementException;
 
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+import ch03_StacksAndQueues.MyStack;
+
+public class MyQueue<T> {
+	private MyStack<T> addStack;
+	private MyStack<T> removeStack;
+
+	public MyQueue() {
+		addStack = new MyStack<T>();
+		removeStack = new MyStack<T>();
 	}
 
-	public void add(T i) {
-		// TODO Auto-generated method stub
+	public boolean isEmpty() {
+		return addStack.isEmpty() && removeStack.isEmpty();
+	}
 
+	public void add(T item) {
+		addStack.push(item);
+	}
+
+	private void moveForPeekOrRemove() {
+		if (isEmpty()) {
+			throw new NoSuchElementException();
+		} else if (removeStack.isEmpty()) {
+			while (!addStack.isEmpty()) {
+				removeStack.push(addStack.pop());
+			}
+		}
 	}
 
 	public T peek() {
-		// TODO Auto-generated method stub
-		return null;
+		moveForPeekOrRemove();
+		return removeStack.peek();
 	}
 
 	public T remove() {
-		// TODO Auto-generated method stub
-		return null;
+		moveForPeekOrRemove();
+		return removeStack.pop();
 	}
 
 }
