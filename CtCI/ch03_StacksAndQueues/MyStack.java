@@ -43,6 +43,10 @@ public class MyStack<T> {
 	}
 
 	public String toString() {
+		if (isEmpty()) {
+			return "";
+		}
+
 		StringBuilder s = new StringBuilder();
 		StackNode<T> node = top;
 		while (node.next != null) {
